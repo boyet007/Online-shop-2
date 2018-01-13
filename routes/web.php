@@ -22,7 +22,7 @@ Route::get('/signup', [
 	'as' => 'user.signup'
 ]);
 
-Route::post('/signup'), [
+Route::post('/signup', [
 	'uses' => 'UserController@postSignup', 
 	'as' =>	'user.signup'
 ]);
