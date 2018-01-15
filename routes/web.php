@@ -27,4 +27,14 @@ Route::post('/signup', [
 	'as' =>	'user.signup'
 ]);
 
+Route::get('/signin', [
+	'uses' => 'UserController@getSignin', 
+	'as' => 'user.signin'
+]);
+
+Route::post('/signin', [
+	'uses' => 'UserController@postSignin', 
+	'as' =>	'user.signin'
+]);
+
 
