@@ -37,4 +37,9 @@ Route::post('/signin', [
 	'as' =>	'user.signin'
 ]);
 
+Route::get('/user/profile', [
+	'uses' => 'UserController@getProfile',
+	'as' => 'user.profile'
+]);
+
 
