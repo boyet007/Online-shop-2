@@ -42,4 +42,9 @@ Route::get('/user/profile', [
 	'as' => 'user.profile'
 ]);
 
+Route::get('/user/logout', [
+	'uses' => 'UserController@getLogout',
+	'as' => 'user.logout'
+]);
+
 
