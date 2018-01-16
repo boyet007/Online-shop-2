@@ -50,7 +50,5 @@ Route::group(['prefix' => 'user'] , function(){
 			'uses' => 'UserController@getLogout',
 			'as' => 'user.logout'
 		]);	
-	});
-
-	
+	});	
 });
