@@ -19,7 +19,7 @@ Route::get('/', [
 
 Route::get('/add-to-cart/{id}', [
 	'uses' => 'ProductController@getAddToCart',
-	'as' => 'product.AddToCart'
+	'as' => 'product.addToCart'
 ]);
 
 Route::group(['prefix' => 'user'] , function(){
