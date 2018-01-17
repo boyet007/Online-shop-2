@@ -15,7 +15,7 @@ Laravel Shopping Cart
 				<h5 class="card-title">{{ $product->title }}</h5>
 				<p class="card-text description">{{ $product->description }}</p>
 				<div class="pull-left price">{{ $product->price }}</div>
-				<a href="#" class="btn btn-success pull-right">Add to Cart</a>
+				<a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-success pull-right">Add to Cart</a>
 			</div>
 		</div>
 	</div>
