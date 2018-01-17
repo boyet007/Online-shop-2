@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ route('product.shoppingCart') }}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : ''  }}</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
