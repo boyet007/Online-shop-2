@@ -20,7 +20,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         $product->save();
-        $product = new new Product([
+        $product = new Product([
             'imagePath' => 'https://yt3.ggpht.com/-tSSS2CHTsgc/AAAAAAAAAAI/AAAAAAAAAAA/Oz6w4Mk4Dq0/s900-c-k-no-mo-rj-c0xffffff/photo.jpg',
             'title' => 'Donal Duck',
             'description' => 'Funny duck in the history',
@@ -28,7 +28,7 @@ class ProductTableSeeder extends Seeder
 
         ]);
         $product->save();
-        $product = new new Product([
+        $product = new Product([
             'imagePath' => 'https://upload.wikimedia.org/wikipedia/en/d/d4/Mickey_Mouse.png',
             'title' => 'Mickey_Mouse',
             'description' => 'Funny mouse in the history',
@@ -45,12 +45,12 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
 
-        $product->save();
-        $product = new new Product([
+        $product = new Product([
             'imagePath' => 'http://1.bp.blogspot.com/-LEVK4pOvopo/VjPYlDRtEfI/AAAAAAAAFSo/JcVcK-ITNKE/s1600/usro.jpg',
             'title' => 'Si Usro',
             'description' => 'Temen si kinoi.',
             'price' => 8
         ]);
-    }
+        $product->save();
+        }
 }
