@@ -8,12 +8,13 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
+      <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <i class="fa fa-user-o" aria-hidden="true"></i> User Management</a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('user.signup') }}">Signup</a>
                 <a class="dropdown-item" href="{{ route('user.signin') }}">Signin</a>
+
              <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
         </div>
       </li>
