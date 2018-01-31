@@ -21,34 +21,42 @@ Route::get('/signup',[
     'as' => 'user.signup'
 ]);
 
-Route::post('/signup',[
-    'uses' => 'Usercontroller@postSignup',
-    'as' =>'user.signup'
-]);
 
-Route::get('/signin',[
-    'uses' => 'UserController@getSignin',
-    'as' => 'user.signin'
-]);
 
-Route::post('/signin',[
-    'uses' => 'Usercontroller@postSignin',
-    'as' =>'user.signin'
-]);
+Route::group(['prefix' => 'user'], function(){
+    Route::post('/signup',[
+        'uses' => 'Usercontroller@postSignup',
+        'as' =>'user.signup'
+    ]);
 
-Route::get('/user/profile',[
-    'uses' => 'Usercontroller@getProfile',
-    'as' => 'user.profile'
-]);
+    Route::get('/signin',[
+        'uses' => 'UserController@getSignin',
+        'as' => 'user.signin'
+    ]);
+
+    Route::post('/signin',[
+        'uses' => 'Usercontroller@postSignin',
+        'as' =>'user.signin'
+    ]);
+
+    Route::get('/profile',[
+        'uses' => 'Usercontroller@getProfile',
+        'as' => 'user.profile'
+    ]);
+
+    Route::get('/logout',[
+        'uses' => 'UserController@getLogout',
+        'as' => 'user.logout'
+    ]);
+});
+
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('user/logout',[
-    'uses' => 'UserController@getLogout',
-    'as' => 'user.logout'
-]);
+
 
 
