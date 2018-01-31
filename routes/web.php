@@ -26,3 +26,21 @@ Route::post('/signup',[
     'as' =>'user.signup'
 ]);
 
+Route::get('/signin',[
+    'uses' => 'UserController@getSignin',
+    'as' => 'user.signin'
+]);
+
+Route::post('/signin',[
+    'uses' => 'Usercontroller@postSignin',
+    'as' =>'user.signin'
+]);
+
+Route::get('/user/profile',[
+    'uses' => 'Usercontroller@getProfile',
+    'as' => 'user.profile'
+]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
