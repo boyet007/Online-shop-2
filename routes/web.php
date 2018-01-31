@@ -44,3 +44,5 @@ Route::get('/user/profile',[
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
