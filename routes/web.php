@@ -41,8 +41,14 @@ Route::get('/user/profile',[
     'as' => 'user.profile'
 ]);
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('user/logout',[
+    'uses' => 'UserController@getLogout',
+    'as' => 'user.logout'
+]);
 
 
