@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -20,10 +21,10 @@ class UserController extends Controller
         ]);
 
         $data = Input::all();
-dd($data);
+
         $user = new User([
             'email' => $data['email'],
-            'password' => Hass::make($data['password'])
+            'password' => Hash::make($data['password'])
         ]);
         $user->save();
 
@@ -44,11 +45,8 @@ dd($data);
             'email' => Input::get('email'),
             'password' => Input::get('password')
         );
-        print_r($data);
 
-        dd(Auth::attempt($data));
-
-        if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
+        if(Auth::attempt($data)){
             return redirect()->route('user.profile');
         }
 
