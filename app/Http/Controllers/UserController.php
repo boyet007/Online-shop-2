@@ -19,9 +19,11 @@ class UserController extends Controller
             'password' => 'required|min:4'
         ]);
 
+        $data = Input::all();
+dd($data);
         $user = new User([
-            'email' => $request->input('email'),
-            'password' => $request->input('password')
+            'email' => $data['email'],
+            'password' => Hass::make($data['password'])
         ]);
         $user->save();
 
