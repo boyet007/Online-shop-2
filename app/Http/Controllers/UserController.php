@@ -59,5 +59,6 @@ class UserController extends Controller
 
     public function getLogout(){
         Auth::logout();
+        Return redirect()->back();
     }
 }
