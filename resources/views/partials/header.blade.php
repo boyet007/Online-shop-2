@@ -13,7 +13,7 @@
          <i class="fa fa-user-o" aria-hidden="true"></i> User Management</a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('user.signup') }}">Signup</a>
-                <a class="dropdown-item" href="#">Signin</a>
+                <a class="dropdown-item" href="{{ route('user.signin') }}">Signin</a>
 
         </div>
       </li>
