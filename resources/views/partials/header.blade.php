@@ -16,8 +16,9 @@
                 <a class="dropdown-item" href="{{ route('user.signin') }}">Signin</a>
 
              <a class="dropdown-item" href="{{ route('user.logout') }}">Logout</a>
-        </div>
+         </div>
       </li>
+      </div>
     </ul>
-  </div>
+
 </nav>
